@@ -54,6 +54,10 @@ namespace ChatGPTApiUI {
                 MessageBox.Show($"Error saving API Key: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 txtbox_apikey.Clear();
+                this.Hide();
+                using(var frm_main = new frm_main()) {
+                    frm_main.ShowDialog();
+                }
                 this.Close();
             }
         }
