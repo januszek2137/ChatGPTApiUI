@@ -17,8 +17,8 @@ namespace ChatGPTApiUI {
                 return false;
             }
 
-            if(key.Length < 20 || key.Length > 100) {
-                errorMessage = "API Key must be between 20 and 100 characters long.";
+            if(key.Length < 100 || key.Length > 200) {
+                errorMessage = "API Key must be between 100 and 200 characters long.";
                 return false;
             }
 
